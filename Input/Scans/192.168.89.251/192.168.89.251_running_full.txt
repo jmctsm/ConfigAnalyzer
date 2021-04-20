@@ -1,0 +1,5793 @@
+version 7.3(0)D1(1)
+power redundancy-mode redundant
+no license grace-period
+no license smart enable
+hardware ip verify address source broadcast
+hardware ip verify address source multicast
+hardware ip verify address destination zero
+no hardware ip verify address identical
+no hardware ip verify address reserved
+hardware ip verify checksum
+hardware ip verify protocol
+no hardware ip verify fragment
+hardware ip verify length minimum
+hardware ip verify length consistent
+hardware ip verify length maximum max-frag
+hardware ip verify length maximum max-tcp
+no hardware ip verify tcp flags
+hardware ip verify tcp tiny-frag
+hardware ip verify version
+hardware ipv6 verify length consistent
+hardware ipv6 verify length maximum max-frag
+hardware ipv6 verify length maximum max-tcp
+hardware ipv6 verify tcp tiny-frag
+hardware ipv6 verify version
+no hardware ip verify syslog
+hardware access-list lou resource threshold 5
+no hardware access-list allow deny ace
+no hardware access-list resource feature bank-mapping
+
+hostname NXOS7
+vdc combined-hostname
+vdc NXOS7 id 1
+  limit-resource module-type m1 m1xl m2xl f2e 
+  ha-policy single-sup reload dual-sup switchover
+  allocate interface Ethernet2/1-48
+  allocate interface Ethernet3/1-48
+  allocate interface Ethernet4/1-48
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 768
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+no feature telnet
+no feature scp-server
+no feature sftp-server
+feature ssh
+cfs distribute
+cfs ipv4 mcast-address 239.255.70.83
+cfs ipv6 mcast-address ff15::efff:4653
+no cfs ipv4 distribute
+no cfs ipv6 distribute
+feature interface-vlan
+
+mac address-table aging-time 1800
+mac address-table core-port-learning
+mac address-table fabricpath remote-learning
+mac address-table notification mac-move
+no mac address-table aging-mode portchannel-refresh
+
+role name priv-15
+  description This is a system defined privilege role.
+  rule 1 permit read-write  
+role name priv-14
+  description This is a system defined privilege role.
+  rule 1 permit read-write  
+role name priv-13
+  description This is a system defined privilege role.
+role name priv-12
+  description This is a system defined privilege role.
+role name priv-11
+  description This is a system defined privilege role.
+role name priv-10
+  description This is a system defined privilege role.
+role name priv-9
+  description This is a system defined privilege role.
+role name priv-8
+  description This is a system defined privilege role.
+role name priv-7
+  description This is a system defined privilege role.
+role name priv-6
+  description This is a system defined privilege role.
+role name priv-5
+  description This is a system defined privilege role.
+role name priv-4
+  description This is a system defined privilege role.
+role name priv-3
+  description This is a system defined privilege role.
+role name priv-2
+  description This is a system defined privilege role.
+role name priv-1
+  description This is a system defined privilege role.
+role name priv-0
+  description This is a system defined privilege role.
+  rule 10 permit command traceroute6 *
+  rule 9 permit command traceroute *
+  rule 8 permit command telnet6 *
+  rule 7 permit command telnet *
+  rule 6 permit command ping6 *
+  rule 5 permit command ping *
+  rule 4 permit command ssh6 *
+  rule 3 permit command ssh *
+  rule 2 permit command enable *
+  rule 1 permit read  
+username admin password 5 $5$Otc7T0NC$K.ulnSZnSyXLrTGNBdtLgZJXEa8EeNx.BrdZ98XyK2C  role network-admin
+username jmctsm password 5 $5$l30K0D/k$fgFQ203AyVMNychpftiWgouJQkmwiSQf3Z7qUEs5lv5  role network-admin
+username jmctsm passphrase  lifetime 99999 warntime 14 gracetime 3
+no password strength-check
+password secure-mode
+no password prompt username
+ssh login-gracetime 120
+
+
+banner motd #User Access Verification
+#
+
+
+banner exec #
+#
+
+ssh login-attempts 3
+
+telnet login-attempts 3
+
+userpassphrase min-length 8 max-length 127 
+
+userpassphrase default-warntime 14 
+
+userpassphrase default-gracetime 3 
+
+userpassphrase default-lifetime 99999 
+
+ssh key rsa 1024 
+no ssh key dsa
+ip domain-lookup
+radius-server test username test password test idle-time 0 
+radius-server timeout 5
+radius-server retransmit 1
+radius-server deadtime 0
+aaa group server radius radius 
+    deadtime 0
+    use-vrf default
+    no source-interface
+keystore type default
+no feature password encryption aes
+crypto key param rsa label NXOS7 modulus 2048 
+crypto ca lookup local
+vlan dot1Q tag native
+system default switchport
+system jumbomtu 0
+no logging event link-status default
+no logging event trunk-status default
+logging event link-status enable
+no logging event trunk-status enable
+no system default switchport fabricpath
+errdisable recovery interval 300
+errdisable detect cause link-flap
+no errdisable recovery cause link-flap
+no errdisable recovery cause udld
+no errdisable recovery cause bpduguard
+errdisable detect cause loopback
+no errdisable recovery cause loopback
+no errdisable recovery cause storm-control
+no errdisable recovery cause security-violation
+no errdisable recovery cause psecure-violation
+no errdisable recovery cause vpc-peerlink
+no errdisable recovery cause failed-port-state
+errdisable detect cause miscabling
+no errdisable recovery cause miscabling
+no vlan dot1Q tag native fabricpath
+ip access-list copp-system-p-acl-bgp
+  10 permit tcp any gt 1024 any eq bgp 
+  20 permit tcp any eq bgp any gt 1024 
+ipv6 access-list copp-system-p-acl-bgp6
+  10 permit tcp any gt 1024 any eq bgp 
+  20 permit tcp any eq bgp any gt 1024 
+ip access-list copp-system-p-acl-cts
+  10 permit tcp any any eq 64999 
+  20 permit tcp any eq 64999 any 
+ip access-list copp-system-p-acl-dhcp
+  10 permit udp any eq bootpc any 
+  20 permit udp any neq bootps any eq bootps 
+ip access-list copp-system-p-acl-dhcp-relay-response
+  10 permit udp any eq bootps any 
+  20 permit udp any any eq bootpc 
+ipv6 access-list copp-system-p-acl-dhcp6
+  10 permit udp any eq 546 any 
+  20 permit udp any neq 547 any eq 547 
+ipv6 access-list copp-system-p-acl-dhcp6-relay-response
+  10 permit udp any eq 547 any 
+  20 permit udp any any eq 546 
+ip access-list copp-system-p-acl-eigrp
+  10 permit eigrp any any 
+ipv6 access-list copp-system-p-acl-eigrp6
+  10 permit eigrp any any 
+ip access-list copp-system-p-acl-ftp
+  10 permit tcp any any eq ftp-data 
+  20 permit tcp any any eq ftp 
+  30 permit tcp any eq ftp-data any 
+  40 permit tcp any eq ftp any 
+ip access-list copp-system-p-acl-glbp
+  10 permit udp any eq 3222 224.0.0.0/24 eq 3222 
+ip access-list copp-system-p-acl-hsrp
+  10 permit udp any 224.0.0.2/32 eq 1985 
+  20 permit udp any 224.0.0.102/32 eq 1985 
+ipv6 access-list copp-system-p-acl-hsrp6
+  10 permit udp any ff02::66/128 eq 2029 
+ip access-list copp-system-p-acl-http-response
+  10 permit tcp any eq www any gt 1024 
+  20 permit tcp any eq 443 any gt 1024 
+ipv6 access-list copp-system-p-acl-http6-response
+  10 permit tcp any eq www any gt 1024 
+  20 permit tcp any eq 443 any gt 1024 
+ip access-list copp-system-p-acl-icmp
+  10 permit icmp any any echo 
+  20 permit icmp any any echo-reply 
+ipv6 access-list copp-system-p-acl-icmp6
+  10 permit icmp any any echo-request 
+  20 permit icmp any any echo-reply 
+ip access-list copp-system-p-acl-igmp
+  10 permit igmp any 224.0.0.0/3 
+ip access-list copp-system-p-acl-lisp
+  10 permit udp any any eq 4342 
+  20 permit udp any eq 4342 any 
+ipv6 access-list copp-system-p-acl-lisp6
+  10 permit udp any any eq 4342 
+  20 permit udp any eq 4342 any 
+mac access-list copp-system-p-acl-mac-cdp-udld-vtp
+  10 permit any 0100.0ccc.cccc 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-cfsoe
+  10 permit any 0180.c200.000e 0000.0000.0000 0x8843 
+  20 permit any 0180.c200.000e 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-dot1x
+  10 permit any 0180.c200.0003 0000.0000.0000 0x888e 
+mac access-list copp-system-p-acl-mac-ecp-ack
+  10 permit any 0180.c200.0000 0000.0000.0000 0x8940 
+  20 permit 0180.c200.0000 0000.0000.0000 any 0x8940 
+  30 permit any any 0x8940 
+mac access-list copp-system-p-acl-mac-ecp-req
+  10 permit any 0180.c200.0000 0000.0000.0000 0x8940 
+  20 permit 0180.c200.0000 0000.0000.0000 any 0x8940 
+  30 permit any any 0x8940 
+mac access-list copp-system-p-acl-mac-fabricpath-isis
+  10 permit any 0180.c200.0041 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-fcoe
+  10 permit any any 0x8906 
+  20 permit any any 0x8914 
+mac access-list copp-system-p-acl-mac-flow-control
+  10 permit any 0180.c200.0001 0000.0000.0000 0x8808 
+mac access-list copp-system-p-acl-mac-l2-tunnel
+  10 permit any any 0x8840 
+mac access-list copp-system-p-acl-mac-l2pt
+  10 permit any 0100.0ccd.cdd0 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-l3-isis
+  10 permit any 0180.c200.0015 0000.0000.0000 
+  20 permit any 0180.c200.0014 0000.0000.0000 
+  30 permit any 0900.2b00.0005 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-lacp
+  10 permit any 0180.c200.0002 0000.0000.0000 0x8809 
+mac access-list copp-system-p-acl-mac-lldp
+  10 permit any 0180.c200.000e 0000.0000.0000 0x88cc 
+mac access-list copp-system-p-acl-mac-mvrp
+  10 permit any 0180.c200.0021 0000.0000.0000 0x88f5 
+mac access-list copp-system-p-acl-mac-otv-isis
+  10 permit any 0100.0cdf.dfdf 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-sdp-srp
+  10 permit any 0180.c200.000e 0000.0000.0000 0x3401 
+mac access-list copp-system-p-acl-mac-stp
+  10 permit any 0100.0ccc.cccd 0000.0000.0000 
+  20 permit any 0180.c200.0000 0000.0000.0000 
+mac access-list copp-system-p-acl-mac-undesirable
+  10 permit any any 
+ipv6 access-list copp-system-p-acl-mld
+  10 permit icmp any any mld-query 
+  20 permit icmp any any mld-report 
+  30 permit icmp any any mld-reduction 
+  40 permit icmp any any mldv2 
+ip access-list copp-system-p-acl-mpls-ldp
+  10 permit udp any eq 646 any eq 646 
+  20 permit tcp any any eq 646 
+  30 permit tcp any eq 646 any 
+ip access-list copp-system-p-acl-mpls-oam
+  10 permit udp any any eq 3503 
+ip access-list copp-system-p-acl-mpls-rsvp
+  10 permit 46 any any 
+ip access-list copp-system-p-acl-msdp
+  10 permit tcp any gt 1024 any eq 639 
+  20 permit tcp any eq 639 any gt 1024 
+ipv6 access-list copp-system-p-acl-ndp
+  10 permit icmp any any router-solicitation 
+  20 permit icmp any any router-advertisement 
+  30 permit icmp any any redirect 
+  40 permit icmp any any nd-ns 
+  50 permit icmp any any nd-na 
+ip access-list copp-system-p-acl-ntp
+  10 permit udp any any eq ntp 
+  20 permit udp any eq ntp any 
+ipv6 access-list copp-system-p-acl-ntp6
+  10 permit udp any any eq ntp 
+  20 permit udp any eq ntp any 
+ip access-list copp-system-p-acl-ospf
+  10 permit ospf any any 
+ipv6 access-list copp-system-p-acl-ospf6
+  10 permit 89 any any 
+ip access-list copp-system-p-acl-otv-as
+  10 permit udp any any eq 8472 
+ip access-list copp-system-p-acl-pim
+  10 permit pim any 224.0.0.0/24 
+  20 permit udp any any eq pim-auto-rp 
+  30 permit ip any 224.0.0.13/32 
+ip access-list copp-system-p-acl-pim-mdt-join
+  10 permit udp any 224.0.0.13/32 
+ip access-list copp-system-p-acl-pim-reg
+  10 permit pim any any 
+ipv6 access-list copp-system-p-acl-pim6
+  10 permit pim any ff02::d/128 
+  20 permit udp any any eq pim-auto-rp 
+ipv6 access-list copp-system-p-acl-pim6-reg
+  10 permit pim any any 
+ip access-list copp-system-p-acl-radius
+  10 permit udp any any eq 1812 
+  20 permit udp any any eq 1813 
+  30 permit udp any any eq 1645 
+  40 permit udp any any eq 1646 
+  50 permit udp any eq 1812 any 
+  60 permit udp any eq 1813 any 
+  70 permit udp any eq 1645 any 
+  80 permit udp any eq 1646 any 
+ipv6 access-list copp-system-p-acl-radius6
+  10 permit udp any any eq 1812 
+  20 permit udp any any eq 1813 
+  30 permit udp any any eq 1645 
+  40 permit udp any any eq 1646 
+  50 permit udp any eq 1812 any 
+  60 permit udp any eq 1813 any 
+  70 permit udp any eq 1645 any 
+  80 permit udp any eq 1646 any 
+ip access-list copp-system-p-acl-rip
+  10 permit udp any 224.0.0.0/24 eq rip 
+ipv6 access-list copp-system-p-acl-rip6
+  10 permit udp any ff02::9/64 eq 521 
+ip access-list copp-system-p-acl-rise
+  10 permit tcp any range 8000 8001 any 
+ip access-list copp-system-p-acl-rise-nam-response
+  10 permit tcp any eq 63934 any gt 1024 
+  20 permit tcp any eq 63936 any gt 1024 
+ipv6 access-list copp-system-p-acl-rise6
+  10 permit tcp any range 8000 8001 any 
+ipv6 access-list copp-system-p-acl-rise6-nam-response
+  10 permit tcp any eq 63934 any gt 1024 
+  20 permit tcp any eq 63936 any gt 1024 
+ip access-list copp-system-p-acl-sftp
+  10 permit tcp any any eq 115 
+  20 permit tcp any eq 115 any 
+ip access-list copp-system-p-acl-smtp-response
+  10 permit tcp any eq smtp any gt 1024 
+ipv6 access-list copp-system-p-acl-smtp6-response
+  10 permit tcp any eq smtp any gt 1024 
+ip access-list copp-system-p-acl-snmp
+  10 permit udp any any eq snmp 
+  20 permit udp any any eq snmptrap 
+  30 permit tcp any any eq 161 
+  40 permit tcp any any eq 162 
+ipv6 access-list copp-system-p-acl-snmp6
+  10 permit udp any any eq snmp 
+  20 permit udp any any eq snmptrap 
+  30 permit tcp any any eq 161 
+  40 permit tcp any any eq 162 
+ip access-list copp-system-p-acl-ssh
+  10 permit tcp any any eq 22 
+  20 permit tcp any eq 22 any 
+ipv6 access-list copp-system-p-acl-ssh6
+  10 permit tcp any any eq 22 
+  20 permit tcp any eq 22 any 
+ip access-list copp-system-p-acl-tacacs
+  10 permit tcp any any eq tacacs 
+  20 permit tcp any eq tacacs any 
+ipv6 access-list copp-system-p-acl-tacacs6
+  10 permit tcp any any eq tacacs 
+  20 permit tcp any eq tacacs any 
+ip access-list copp-system-p-acl-telnet
+  10 permit tcp any any eq telnet 
+  20 permit tcp any any eq 107 
+  30 permit tcp any eq telnet any 
+  40 permit tcp any eq 107 any 
+ipv6 access-list copp-system-p-acl-telnet6
+  10 permit tcp any any eq telnet 
+  20 permit tcp any any eq 107 
+  30 permit tcp any eq telnet any 
+  40 permit tcp any eq 107 any 
+ip access-list copp-system-p-acl-tftp
+  10 permit udp any any eq tftp 
+  20 permit udp any any eq 1758 
+  30 permit udp any eq tftp any 
+  40 permit udp any eq 1758 any 
+ipv6 access-list copp-system-p-acl-tftp6
+  10 permit udp any any eq tftp 
+  20 permit udp any any eq 1758 
+  30 permit udp any eq tftp any 
+  40 permit udp any eq 1758 any 
+ip access-list copp-system-p-acl-traceroute
+  10 permit icmp any any ttl-exceeded 
+  20 permit icmp any any port-unreachable 
+  30 permit udp any any range 33434 33534 
+ip access-list copp-system-p-acl-undesirable
+  10 permit udp any any eq 1434 
+ip access-list copp-system-p-acl-vpc
+  10 permit udp any any eq 3200 
+ip access-list copp-system-p-acl-vrrp
+  10 permit ip any 224.0.0.18/32 
+ipv6 access-list copp-system-p-acl-vrrp6
+  10 permit ipv6 any ff02::12/128 
+ip access-list copp-system-p-acl-wccp
+  10 permit udp any eq 2048 any eq 2048 
+  delay up 0 down 0
+
+class-map type control-plane match-any copp-system-p-class-critical
+  match access-group name copp-system-p-acl-bgp
+  match access-group name copp-system-p-acl-rip
+  match access-group name copp-system-p-acl-vpc
+  match access-group name copp-system-p-acl-bgp6
+  match access-group name copp-system-p-acl-lisp
+  match access-group name copp-system-p-acl-ospf
+  match access-group name copp-system-p-acl-rip6
+  match access-group name copp-system-p-acl-rise
+  match access-group name copp-system-p-acl-eigrp
+  match access-group name copp-system-p-acl-lisp6
+  match access-group name copp-system-p-acl-ospf6
+  match access-group name copp-system-p-acl-rise6
+  match access-group name copp-system-p-acl-eigrp6
+  match access-group name copp-system-p-acl-otv-as
+  match access-group name copp-system-p-acl-mac-l2pt
+  match access-group name copp-system-p-acl-mpls-ldp
+  match access-group name copp-system-p-acl-mpls-rsvp
+  match access-group name copp-system-p-acl-mac-l3-isis
+  match access-group name copp-system-p-acl-mac-otv-isis
+  match access-group name copp-system-p-acl-mac-fabricpath-isis
+  match protocol mpls router-alert
+class-map type control-plane match-any copp-system-p-class-ecp-ack
+  match access-group name copp-system-p-acl-mac-ecp-ack
+class-map type control-plane match-any copp-system-p-class-ecp-req
+  match access-group name copp-system-p-acl-mac-ecp-req
+class-map type control-plane match-any copp-system-p-class-exception
+  match exception ip option
+  match exception ip icmp unreachable
+  match exception ipv6 option
+  match exception ipv6 icmp unreachable
+class-map type control-plane match-any copp-system-p-class-fcoe
+  match access-group name copp-system-p-acl-mac-fcoe
+class-map type control-plane match-any copp-system-p-class-important
+  match access-group name copp-system-p-acl-cts
+  match access-group name copp-system-p-acl-glbp
+  match access-group name copp-system-p-acl-hsrp
+  match access-group name copp-system-p-acl-vrrp
+  match access-group name copp-system-p-acl-wccp
+  match access-group name copp-system-p-acl-hsrp6
+  match access-group name copp-system-p-acl-vrrp6
+  match access-group name copp-system-p-acl-mac-lldp
+  match access-group name copp-system-p-acl-mac-mvrp
+  match access-group name copp-system-p-acl-mac-flow-control
+class-map type control-plane match-any copp-system-p-class-l2-default
+  match access-group name copp-system-p-acl-mac-undesirable
+class-map type control-plane match-any copp-system-p-class-l2-unpoliced
+  match access-group name copp-system-p-acl-mac-stp
+  match access-group name copp-system-p-acl-mac-lacp
+  match access-group name copp-system-p-acl-mac-cfsoe
+  match access-group name copp-system-p-acl-mac-sdp-srp
+  match access-group name copp-system-p-acl-mac-l2-tunnel
+  match access-group name copp-system-p-acl-mac-cdp-udld-vtp
+class-map type control-plane match-any copp-system-p-class-management
+  match access-group name copp-system-p-acl-ftp
+  match access-group name copp-system-p-acl-ntp
+  match access-group name copp-system-p-acl-ssh
+  match access-group name copp-system-p-acl-ntp6
+  match access-group name copp-system-p-acl-sftp
+  match access-group name copp-system-p-acl-snmp
+  match access-group name copp-system-p-acl-ssh6
+  match access-group name copp-system-p-acl-tftp
+  match access-group name copp-system-p-acl-snmp6
+  match access-group name copp-system-p-acl-tftp6
+  match access-group name copp-system-p-acl-radius
+  match access-group name copp-system-p-acl-tacacs
+  match access-group name copp-system-p-acl-telnet
+  match access-group name copp-system-p-acl-radius6
+  match access-group name copp-system-p-acl-tacacs6
+  match access-group name copp-system-p-acl-telnet6
+class-map type control-plane match-any copp-system-p-class-monitoring
+  match access-group name copp-system-p-acl-icmp
+  match access-group name copp-system-p-acl-icmp6
+  match access-group name copp-system-p-acl-mpls-oam
+  match access-group name copp-system-p-acl-traceroute
+  match access-group name copp-system-p-acl-http-response
+  match access-group name copp-system-p-acl-smtp-response
+  match access-group name copp-system-p-acl-http6-response
+  match access-group name copp-system-p-acl-smtp6-response
+  match access-group name copp-system-p-acl-rise-nam-response
+  match access-group name copp-system-p-acl-rise6-nam-response
+  match protocol mpls
+class-map type control-plane match-any copp-system-p-class-multicast-host
+  match access-group name copp-system-p-acl-mld
+  match access-group name copp-system-p-acl-igmp
+class-map type control-plane match-any copp-system-p-class-multicast-router
+  match access-group name copp-system-p-acl-pim
+  match access-group name copp-system-p-acl-msdp
+  match access-group name copp-system-p-acl-pim6
+  match access-group name copp-system-p-acl-pim-reg
+  match access-group name copp-system-p-acl-pim6-reg
+  match access-group name copp-system-p-acl-pim-mdt-join
+  match protocol mpls exp 6
+class-map type control-plane match-any copp-system-p-class-ndp
+  match access-group name copp-system-p-acl-ndp
+class-map type control-plane match-any copp-system-p-class-normal
+  match access-group name copp-system-p-acl-mac-dot1x
+  match exception ip multicast directly-connected-sources
+  match exception ipv6 multicast directly-connected-sources
+  match protocol arp
+class-map type control-plane match-any copp-system-p-class-normal-dhcp
+  match access-group name copp-system-p-acl-dhcp
+  match access-group name copp-system-p-acl-dhcp6
+  match redirect dhcp-snoop
+class-map type control-plane match-any copp-system-p-class-normal-dhcp-relay-response
+  match access-group name copp-system-p-acl-dhcp-relay-response
+  match access-group name copp-system-p-acl-dhcp6-relay-response
+class-map type control-plane match-any copp-system-p-class-redirect
+  match redirect arp-inspect
+class-map type control-plane match-any copp-system-p-class-undesirable
+  match access-group name copp-system-p-acl-undesirable
+  match exception fcoe-fib-miss
+policy-map type control-plane copp-system-p-policy-strict 
+  class copp-system-p-class-critical
+    set cos 7 
+    police cir 36000 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-important
+    set cos 6 
+    police cir 1400 kbps bc 1500 ms conform transmit violate drop 
+  class copp-system-p-class-multicast-router
+    set cos 6 
+    police cir 2600 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-management
+    set cos 2 
+    police cir 10000 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-multicast-host
+    set cos 1 
+    police cir 1000 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-redirect
+    set cos 1 
+    police cir 280 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-normal
+    set cos 1 
+    police cir 680 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-ndp
+    set cos 6 
+    police cir 680 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-normal-dhcp
+    set cos 1 
+    police cir 1500 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-normal-dhcp-relay-response
+    set cos 1 
+    police cir 1800 kbps bc 500 ms conform transmit violate drop 
+  class copp-system-p-class-exception
+    set cos 1 
+    police cir 360 kbps bc 250 ms conform transmit violate drop 
+  class copp-system-p-class-monitoring
+    set cos 1 
+    police cir 130 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-ecp-req
+    set cos 2 
+    police cir 400 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-ecp-ack
+    set cos 6 
+    police cir 100 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-l2-unpoliced
+    police cir 8 gbps bc 5 mbytes conform transmit violate transmit 
+  class copp-system-p-class-undesirable
+    set cos 0 
+    police cir 32 kbps bc 250 ms conform drop violate drop 
+  class copp-system-p-class-fcoe
+    set cos 6 
+    police cir 1060 kbps bc 1000 ms conform transmit violate drop 
+  class copp-system-p-class-l2-default
+    police cir 100 kbps bc 250 ms conform transmit violate drop 
+  class class-default
+    set cos 0 
+    police cir 100 kbps bc 250 ms conform transmit violate drop 
+copp profile strict
+control-plane
+  scale-factor 1.00 module 1
+  scale-factor 1.00 module 2
+  scale-factor 1.00 module 3
+  scale-factor 1.00 module 4
+  scale-factor 1.00 module 5
+  scale-factor 1.00 module 6
+  scale-factor 1.00 module 7
+  scale-factor 1.00 module 8
+  scale-factor 1.00 module 9
+  scale-factor 1.00 module 10
+  scale-factor 1.00 module 11
+  scale-factor 1.00 module 12
+  scale-factor 1.00 module 13
+  scale-factor 1.00 module 14
+  scale-factor 1.00 module 15
+  scale-factor 1.00 module 16
+  scale-factor 1.00 module 17
+  scale-factor 1.00 module 18
+  scale-factor 1.00 module 19
+  scale-factor 1.00 module 20
+  scale-factor 1.00 module 21
+  scale-factor 1.00 module 22
+  scale-factor 1.00 module 23
+  scale-factor 1.00 module 24
+  scale-factor 1.00 module 25
+  scale-factor 1.00 module 26
+  scale-factor 1.00 module 27
+  scale-factor 1.00 module 28
+  scale-factor 1.00 module 29
+  scale-factor 1.00 module 30
+  scale-factor 1.00 module 31
+  scale-factor 1.00 module 32
+snmp-server aaa-user cache-timeout 3600
+snmp-server protocol enable 
+no snmp-server aaa exclusive-behavior enable 
+no snmp-server globalEnforcePriv
+snmp-server tcp-session auth
+snmp-server user jmctsm network-admin auth md5 0x5f503ec9e1165ce50098f013de1e75d4 priv 0x5f503ec9e1165ce50098f013de1e75d4 localizedkey
+snmp-server user admin auth md5 0x328945d53e05e8e7207f8c20b142f0b7 priv 0x328945d53e05e8e7207f8c20b142f0b7 localizedkey engineID 128:0:0:9:3:0:0:0:0:0:0
+rmon event 1 log description FATAL(1) owner PMON@FATAL
+rmon event 2 log description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log description ERROR(3) owner PMON@ERROR
+rmon event 4 log description WARNING(4) owner PMON@WARNING
+rmon event 5 log description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps link
+snmp-server enable traps entity entity_mib_change
+snmp-server enable traps entity entity_module_status_change
+snmp-server enable traps entity entity_power_status_change
+snmp-server enable traps entity entity_module_inserted
+snmp-server enable traps entity entity_module_removed
+snmp-server enable traps entity entity_unrecognised_module
+snmp-server enable traps entity entity_fan_status_change
+snmp-server enable traps entity entity_power_out_change
+snmp-server enable traps link linkDown
+snmp-server enable traps link linkUp
+snmp-server enable traps link extended-linkDown
+snmp-server enable traps link extended-linkUp
+snmp-server enable traps link cieLinkDown
+snmp-server enable traps link cieLinkUp
+snmp-server enable traps link connUnitPortStatusChange
+snmp-server enable traps link delayed-link-state-change
+snmp-server enable traps link fcot-inserted
+snmp-server enable traps link fcot-removed
+no snmp-server enable traps callhome event-notify
+no snmp-server enable traps callhome smtp-send-fail
+no snmp-server enable traps cfs state-change-notif
+no snmp-server enable traps cfs merge-failure
+snmp-server enable traps rf redundancy_framework
+no snmp-server enable traps aaa server-state-change
+snmp-server enable traps license notify-license-expiry
+snmp-server enable traps license notify-no-license-for-feature
+snmp-server enable traps license notify-licensefile-missing
+snmp-server enable traps license notify-license-expiry-warning
+snmp-server enable traps upgrade UpgradeOpNotifyOnCompletion
+snmp-server enable traps upgrade UpgradeJobStatusNotify
+no snmp-server enable traps feature-control FeatureOpStatusChange
+no snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps rmon risingAlarm
+snmp-server enable traps rmon fallingAlarm
+snmp-server enable traps rmon hcRisingAlarm
+snmp-server enable traps rmon hcFallingAlarm
+no snmp-server enable traps config ccmCLIRunningConfigChanged
+no snmp-server enable traps snmp authentication
+no snmp-server enable traps link cisco-xcvr-mon-status-chg
+no snmp-server enable traps vtp notifs
+no snmp-server enable traps vtp vlancreate
+no snmp-server enable traps vtp vlandelete
+snmp-server enable traps entity entity_sensor
+snmp-server enable traps entity cefcMIBEnableStatusNotification
+no snmp-server enable traps system Clock-change-notification
+snmp-server enable traps generic coldStart
+snmp-server enable traps generic warmStart
+no snmp-server enable traps feature-control ciscoFeatOpStatusChange
+no snmp-server enable traps syslog message-generated
+snmp-server enable traps entity cefcEnablePSOutputChangeNotif
+no snmp-server enable traps vtp notifs
+snmp-server enable traps cbe city new
+no snmp-server enable traps cbe city flooded
+callhome
+  switch-priority 7
+  destination-profile CiscoTAC-1 transport-method email
+  no destination-profile CiscoTAC-1 transport-method http
+  destination-profile CiscoTAC-1 message-size 5000000
+  destination-profile CiscoTAC-1 message-level 0
+  destination-profile full_txt transport-method email
+  no destination-profile full_txt transport-method http
+  destination-profile full_txt message-size 2500000
+  destination-profile full_txt message-level 0
+  destination-profile short_txt transport-method email
+  no destination-profile short_txt transport-method http
+  destination-profile short_txt message-size 4000
+  destination-profile short_txt message-level 0
+  destination-profile CiscoTAC-1 alert-group cisco-tac
+  destination-profile full_txt alert-group all
+  destination-profile short_txt alert-group all
+  transport http use-vrf default
+  no transport http proxy enable
+  data-privacy level normal
+  no enable
+  duplicate-message throttle
+  periodic-inventory notification
+  periodic-inventory notification interval  7
+  periodic-inventory notification timeofday 08:00
+  diagnostic-signature
+    active
+    profile CiscoTAC-1
+no ntp allow private
+no ntp allow control
+no ntp passive
+clock format 24-hours
+aaa authentication login default local 
+aaa authorization ssh-publickey default local 
+aaa authorization ssh-certificate default local 
+aaa accounting default local 
+aaa user default-role 
+aaa authentication login default fallback error local 
+aaa authentication login console fallback error local 
+no aaa authentication login invalid-username-log 
+no aaa authentication login error-enable 
+no aaa authentication login mschap enable 
+no aaa authentication login mschapv2 enable 
+no aaa authentication login chap enable 
+no aaa authentication login ascii-authentication 
+no radius-server directed-request 
+
+ip route 0.0.0.0/0 192.168.89.2
+vlan 1,69
+l2protocol tunnel cos 5
+vlan 69
+  mode ce
+  state active
+  no shutdown
+  name Other
+
+cdp advertise v2
+cdp enable
+cdp holdtime 180
+cdp timer 60
+no cdp format device-id system-name
+spanning-tree mode rapid-pvst
+spanning-tree pathcost method short
+no spanning-tree port type edge default
+no spanning-tree port type network default
+spanning-tree bridge assurance
+no spanning-tree loopguard default
+spanning-tree fcoe
+spanning-tree vlan 69 priority 32768
+spanning-tree vlan 69 hello-time 2
+spanning-tree vlan 69 forward-time 15
+spanning-tree vlan 69 max-age 20
+vrf context management
+  ip route 0.0.0.0/0 192.168.89.2
+port-channel load-defer 120
+port-channel hash-distribution adaptive
+ logging event port-channel
+hardware access-list update atomic
+no hardware access-list update default-result permit
+no hardware forwarding layer-2 f1 exclude supervisor
+no hardware access-list fp_dnl
+hardware rate-limiter layer-3 mtu 500 
+hardware rate-limiter layer-3 ttl 500 
+hardware rate-limiter layer-3 control 10000 
+hardware rate-limiter layer-3 glean 100 
+hardware rate-limiter layer-3 multicast directly-connected 3000 
+hardware rate-limiter layer-3 multicast local-groups 3000 
+hardware rate-limiter layer-3 multicast rpf-leak 500 
+hardware rate-limiter layer-2 storm-control disable 
+hardware rate-limiter access-list-log 100 
+hardware rate-limiter copy 30000 
+hardware rate-limiter receive 30000 
+hardware rate-limiter layer-2 port-security 500 
+hardware rate-limiter layer-2 mcast-snooping 10000 
+hardware rate-limiter layer-2 vpc-low 4000 
+hardware rate-limiter layer-2 l2pt 500 
+hardware rate-limiter f1 rl-1 4500 
+hardware rate-limiter f1 rl-2 1000 
+hardware rate-limiter f1 rl-3 1000 
+hardware rate-limiter f1 rl-4 100 
+hardware rate-limiter f1 rl-5 1500 
+hardware rate-limiter layer-2 vpc-peer-gw 5000 
+hardware rate-limiter layer-2 lisp-map-cache 5000 
+hardware rate-limiter layer-2 dpss 100 
+hardware rate-limiter layer-3 glean-fast 100 
+hardware rate-limiter layer-2 otv 100 
+hardware rate-limiter layer-2 netflow 8000 
+hardware rate-limiter layer-3 auto-config 200 
+hardware rate-limiter layer-3 vxlan 100 
+port-channel load-balance src-dst ip rotate 0  
+no port-channel load-balance hash enable
+no hardware forwarding l3 resource route non-deterministic
+no hardware access-list capture
+hardware forwarding interface statistics mode default
+hardware pdt port 237
+no hardware forwarding unicast trace
+no port-channel load-balance hash-modulo-f2
+no port-channel load-balance hash-modulo
+no hardware access-list resource extend  l4-protocol-cam
+no hardware qos mpls exp topmost pipe-mode
+no hardware mtu exclude fp-header
+no hardware forwarding redirect-drops
+no hardware forwarding shim
+no fabricpath mode transit
+no hardware forwarding l3 load-balance unique-paths
+hardware proxy layer-3 replication rebalance-mode manual
+
+
+interface mgmt0
+  no description
+  speed auto
+  duplex auto
+  snmp trap link-status
+  no shutdown
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  vrf member management
+  ip address 192.168.89.251/24
+
+interface Vlan1
+  no description
+  shutdown
+  mtu 1500
+  bandwidth 1000000
+  autostate
+  delay 1
+  medium broadcast
+  snmp trap link-status
+  carrier-delay msec 100
+  load-interval counter 1 60
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0c1a.90bd.f22f 
+  no management
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+
+interface Vlan69
+  no description
+  no shutdown
+  mtu 1500
+  bandwidth 1000000
+  autostate
+  delay 1
+  medium broadcast
+  snmp trap link-status
+  carrier-delay msec 100
+  load-interval counter 1 60
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0c1a.90bd.f22f 
+  no management
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  ip address 192.168.89.250/24
+
+interface Ethernet2/1
+  no description
+  switchport
+  switchport mode access
+  no switchport monitor
+  no switchport dot1q ethertype
+  switchport access vlan 69
+  switchport trunk native vlan 1
+  switchport vlan mapping enable 
+  switchport trunk allowed vlan 1-4094
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  no egress port-channel load-balance random
+  no shutdown lan
+  no switchport autostate exclude
+  no shutdown
+
+interface Ethernet2/2
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/3
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/4
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/5
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/6
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/7
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/8
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/9
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/10
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/11
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/12
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/13
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/14
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/15
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/16
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/17
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/18
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/19
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/20
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/21
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/22
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/23
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/24
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/25
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/26
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/27
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/28
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/29
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/30
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/31
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/32
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/33
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/34
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/35
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/36
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/37
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/38
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/39
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/40
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/41
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/42
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/43
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/44
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/45
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/46
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/47
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet2/48
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/1
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/2
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/3
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/4
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/5
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/6
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/7
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/8
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/9
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/10
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/11
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/12
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/13
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/14
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/15
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/16
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/17
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/18
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/19
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/20
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/21
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/22
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/23
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/24
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/25
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/26
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/27
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/28
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/29
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/30
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/31
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/32
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/33
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/34
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/35
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/36
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/37
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/38
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/39
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/40
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/41
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/42
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/43
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/44
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/45
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/46
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/47
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet3/48
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/1
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/2
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/3
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/4
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/5
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/6
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/7
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/8
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/9
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/10
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/11
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/12
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/13
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/14
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/15
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/16
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/17
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/18
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/19
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/20
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/21
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/22
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/23
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/24
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/25
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/26
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/27
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/28
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/29
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/30
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/31
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/32
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/33
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/34
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/35
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/36
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/37
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/38
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/39
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/40
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/41
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/42
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/43
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/44
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/45
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/46
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/47
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+
+interface Ethernet4/48
+  no description
+  shutdown
+  no switchport
+  cdp enable
+  spanning-tree port-priority 128
+  spanning-tree cost auto
+  spanning-tree link-type auto
+  no spanning-tree bpduguard
+  no spanning-tree bpdufilter
+  speed auto
+  duplex auto
+  flowcontrol receive off
+  flowcontrol send off
+  link debounce time 100
+  link debounce link-up time 0
+  no beacon
+  delay 1
+  snmp trap link-status
+  logging event port link-status default
+  logging event port trunk-status default
+  bandwidth 1000000
+  no bandwidth inherit
+  storm-control broadcast level 100.00
+  storm-control multicast level 100.00
+  storm-control unicast level 100.00
+  load-interval counter 1 30
+  load-interval counter 2 300
+  no load-interval counter 3
+  mac-address 0000.0000.002f
+  medium broadcast
+  no egress port-channel load-balance random
+  no shutdown lan
+cli alias name wr copy run start
+no terminal log-all
+line console
+  exec-timeout 30
+  terminal length 24
+  terminal width 80
+line vty
+  session-limit 16
+  exec-timeout 30
+  absolute-timeout 0
+boot kickstart bootflash:/titanium-d1-kickstart.7.3.0.D1.1.bin
+boot system bootflash:/titanium-d1.7.3.0.D1.1.bin 
+no boot poap enable
+no ip radius source-interface
+no system default switchport shutdown
+xml server max-session 8
+no xml server validate all
+xml server timeout 1200
+no fabricpath multicast aggregate-routes
+logging monitor 5
