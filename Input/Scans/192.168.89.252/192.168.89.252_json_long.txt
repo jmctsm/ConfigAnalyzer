@@ -1,0 +1,3545 @@
+{
+    "192.168.89.252": {
+        "ping_response_times": [
+            20.05,
+            50.49,
+            93.46
+        ],
+        "username": "jmctsm",
+        "password": "Password for device has been given",
+        "enable_password": "Not using Enable password for this device",
+        "domain_name": "test.local",
+        "Open_TCP_Ports_List": {
+            "22": {
+                "Return Information": "SSH-2.0-Cisco-1.25"
+            }
+        },
+        "Open_UDP_Ports_List": {},
+        "Closed_TCP_Ports_List": {
+            "20": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "21": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "23": {
+                "ERROR": "UnicodeDecodeError -- 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+            },
+            "25": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "37": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "43": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "53": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "79": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "80": {
+                "ERROR": "ConnectionError -- HTTPConnectionPool(host='192.168.89.252', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x04C68DC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            },
+            "88": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "109": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "110": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "115": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "118": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "143": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "162": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "179": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "194": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "389": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "443": {
+                "ERROR": "ConnectionError -- HTTPSConnectionPool(host='192.168.89.252', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x05338D00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            },
+            "464": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "465": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "515": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "530": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "543": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "544": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "547": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "993": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "995": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "1080": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3128": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3306": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3389": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5432": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5900": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5938": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "8080": {
+                "ERROR": "ConnectionError -- HTTPConnectionPool(host='192.168.89.252', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x056A9E08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            },
+            "8443": {
+                "ERROR": "ConnectionError -- HTTPSConnectionPool(host='192.168.89.252', port=8443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x05519D90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            }
+        },
+        "Closed_UDP_Ports_List": {
+            "43": {
+                "ERROR": "Socket Timed Out"
+            },
+            "53": {
+                "ERROR": "DNSTimeOutDNS -- operation timed out.  Port is more than likely blocked or not open"
+            },
+            "67": {
+                "ERROR": "Socket Timed Out"
+            },
+            "69": {
+                "ERROR": "Socket Timed Out"
+            },
+            "88": {
+                "ERROR": "Socket Timed Out"
+            },
+            "118": {
+                "ERROR": "Socket Timed Out"
+            },
+            "123": {
+                "ERROR": "Socket Timed Out"
+            },
+            "161": {
+                "ERROR": "Socket Timed Out"
+            },
+            "162": {
+                "ERROR": "Socket Timed Out"
+            },
+            "194": {
+                "ERROR": "Socket Timed Out"
+            },
+            "464": {
+                "ERROR": "Socket Timed Out"
+            },
+            "514": {
+                "ERROR": "Socket Timed Out"
+            },
+            "530": {
+                "ERROR": "Socket Timed Out"
+            },
+            "547": {
+                "ERROR": "Socket Timed Out"
+            },
+            "995": {
+                "ERROR": "Socket Timed Out"
+            },
+            "1080": {
+                "ERROR": "Socket Timed Out"
+            },
+            "3389": {
+                "ERROR": "Socket Timed Out"
+            },
+            "5938": {
+                "ERROR": "Socket Timed Out"
+            },
+            "8080": {
+                "ERROR": "Socket Timed Out"
+            },
+            "8443": {
+                "ERROR": "Socket Timed Out"
+            }
+        },
+        "Device_Info": {
+            "Version_Info": [
+                "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20170321:233949) [mmen 101]",
+                "Copyright (c) 1986-2017 by Cisco Systems, Inc.",
+                "Compiled Wed 22-Mar-17 08:38 by mmen",
+                "ROM: Bootstrap program is IOSv",
+                "L2Switch uptime is 2 weeks, 1 day, 5 hours, 19 minutes",
+                "System returned to ROM by reload",
+                "System image file is \"flash0:/vios_l2-adventerprisek9-m\"",
+                "Last reload reason: Unknown reason",
+                "This product contains cryptographic features and is subject to United",
+                "States and local country laws governing import, export, transfer and",
+                "use. Delivery of Cisco cryptographic products does not imply",
+                "third-party authority to import, export, distribute or use encryption.",
+                "Importers, exporters, distributors and users are responsible for",
+                "compliance with U.S. and local country laws. By using this product you",
+                "agree to comply with applicable laws and regulations. If you are unable",
+                "to comply with U.S. and local laws, return this product immediately.",
+                "A summary of U.S. laws governing Cisco cryptographic products may be found at:",
+                "http://www.cisco.com/wwl/export/crypto/tool/stqrg.html",
+                "If you require further assistance please contact us by sending email to",
+                "export@cisco.com.",
+                "Cisco IOSv () processor (revision 1.0) with 574709K/209920K bytes of memory.",
+                "Processor board ID 9GBM71WM1VE",
+                "1 Virtual Ethernet interface",
+                "16 Gigabit Ethernet interfaces",
+                "DRAM configuration is 72 bits wide with parity disabled.",
+                "256K bytes of non-volatile configuration memory.",
+                "2097152K bytes of ATA System CompactFlash 0 (Read/Write)",
+                "0K bytes of ATA CompactFlash 1 (Read/Write)",
+                "0K bytes of ATA CompactFlash 2 (Read/Write)",
+                "0K bytes of ATA CompactFlash 3 (Read/Write)",
+                "Configuration register is 0x101"
+            ],
+            "CONFIG": {
+                "Open_Close": true,
+                "Open_Close_Msg": "SSH is open and Device Type is known (ios).",
+                "Device_Information": {
+                    "Device_Facts": {
+                        "uptime": 1315140,
+                        "vendor": "Cisco",
+                        "os_version": "vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20170321:233949) [mmen 101]",
+                        "serial_number": "9GBM71WM1VE",
+                        "model": "IOSv",
+                        "hostname": "L2Switch",
+                        "fqdn": "L2Switch.test.local",
+                        "interface_list": [
+                            "GigabitEthernet0/0",
+                            "GigabitEthernet0/1",
+                            "GigabitEthernet0/2",
+                            "GigabitEthernet0/3",
+                            "GigabitEthernet1/0",
+                            "GigabitEthernet1/1",
+                            "GigabitEthernet1/2",
+                            "GigabitEthernet1/3",
+                            "GigabitEthernet2/0",
+                            "GigabitEthernet2/1",
+                            "GigabitEthernet2/2",
+                            "GigabitEthernet2/3",
+                            "GigabitEthernet3/0",
+                            "GigabitEthernet3/1",
+                            "GigabitEthernet3/2",
+                            "GigabitEthernet3/3",
+                            "Vlan69"
+                        ]
+                    },
+                    "Device_Optics": {},
+                    "Device_Network_Instances": {
+                        "default": {
+                            "name": "default",
+                            "type": "DEFAULT_INSTANCE",
+                            "state": {
+                                "route_distinguisher": ""
+                            },
+                            "interfaces": {
+                                "interface": {
+                                    "GigabitEthernet0/0": {},
+                                    "GigabitEthernet0/1": {},
+                                    "GigabitEthernet0/2": {},
+                                    "GigabitEthernet0/3": {},
+                                    "GigabitEthernet1/0": {},
+                                    "GigabitEthernet1/1": {},
+                                    "GigabitEthernet1/2": {},
+                                    "GigabitEthernet1/3": {},
+                                    "GigabitEthernet2/0": {},
+                                    "GigabitEthernet2/1": {},
+                                    "GigabitEthernet2/2": {},
+                                    "GigabitEthernet2/3": {},
+                                    "GigabitEthernet3/0": {},
+                                    "GigabitEthernet3/1": {},
+                                    "GigabitEthernet3/2": {},
+                                    "GigabitEthernet3/3": {},
+                                    "Vlan69": {}
+                                }
+                            }
+                        }
+                    },
+                    "Device_LLDP_Detail": {},
+                    "Device_LLDP": {},
+                    "Device_Environment": {
+                        "cpu": {
+                            "0": {
+                                "%usage": 20.0
+                            }
+                        },
+                        "memory": {
+                            "used_ram": 253024592,
+                            "available_ram": 689144800
+                        },
+                        "temperature": {
+                            "invalid": {
+                                "is_alert": false,
+                                "is_critical": false,
+                                "temperature": -1.0
+                            }
+                        },
+                        "power": {
+                            "invalid": {
+                                "status": true,
+                                "output": -1.0,
+                                "capacity": -1.0
+                            }
+                        },
+                        "fans": {
+                            "invalid": {
+                                "status": true
+                            }
+                        }
+                    },
+                    "Device_Interfaces": {
+                        "GigabitEthernet0/0": {
+                            "is_enabled": true,
+                            "is_up": true,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:00",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet0/1": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:01",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet0/2": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:02",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet0/3": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:03",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet1/0": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:04",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet1/1": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:05",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet1/2": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:06",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet1/3": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:07",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet2/0": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:08",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet2/1": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:09",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet2/2": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0A",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet2/3": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0B",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet3/0": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0C",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet3/1": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0D",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet3/2": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0E",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "GigabitEthernet3/3": {
+                            "is_enabled": true,
+                            "is_up": false,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:31:0F",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        },
+                        "Vlan69": {
+                            "is_enabled": true,
+                            "is_up": true,
+                            "description": "",
+                            "mac_address": "0C:1A:90:C3:80:45",
+                            "last_flapped": -1.0,
+                            "mtu": 1500,
+                            "speed": 1000
+                        }
+                    },
+                    "Device_Interfaces_IP": {
+                        "Vlan69": {
+                            "ipv4": {
+                                "192.168.89.252": {
+                                    "prefix_length": 24
+                                }
+                            }
+                        }
+                    },
+                    "Device_SNMP_Information": {
+                        "chassis_id": "%SNMP agent not enabled",
+                        "community": {},
+                        "contact": "unknown",
+                        "location": "unknown"
+                    },
+                    "Device_Users": {
+                        "jmctsm": {
+                            "level": 15,
+                            "password": "$1$Y19A$pHP0KYS/Z8sqsUx0oCNSX1",
+                            "sshkeys": []
+                        }
+                    },
+                    "Device_Startup_Config_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_startup.txt",
+                    "Device_Running_Config_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_running.txt",
+                    "Device_Candidate_Config_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_candidate.txt",
+                    "Device_Startup_Config_Full_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_startup_full.txt",
+                    "Device_Running_Config_Full_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_running_full.txt",
+                    "Device_Candidate_Config_Full_File_Location": "C:\\Users\\copelaji\\OneDrive - WWT\\Python_Project\\NetworkScanner/Output/Scans/192.168.89.252\\192.168.89.252_candidate_full.txt"
+                },
+                "Show_Info": {
+                    "dir": [
+                        {
+                            "file_system": "flash0:/",
+                            "id": "1",
+                            "permissions": "drw-",
+                            "size": "0",
+                            "total_size": "2142715904",
+                            "total_free": "2029989888",
+                            "date_time": "Jan 30 2013 00:00:00 +00:00",
+                            "name": "boot"
+                        },
+                        {
+                            "file_system": "flash0:/",
+                            "id": "264",
+                            "permissions": "drw-",
+                            "size": "0",
+                            "total_size": "2142715904",
+                            "total_free": "2029989888",
+                            "date_time": "Oct 14 2013 00:00:00 +00:00",
+                            "name": "config"
+                        },
+                        {
+                            "file_system": "flash0:/",
+                            "id": "267",
+                            "permissions": "-rw-",
+                            "size": "107590528",
+                            "total_size": "2142715904",
+                            "total_free": "2029989888",
+                            "date_time": "Mar 22 2017 00:00:00 +00:00",
+                            "name": "vios_l2-adventerprisek9-m"
+                        },
+                        {
+                            "file_system": "flash0:/",
+                            "id": "268",
+                            "permissions": "-rw-",
+                            "size": "524288",
+                            "total_size": "2142715904",
+                            "total_free": "2029989888",
+                            "date_time": "Mar 16 2021 08:36:28 +00:00",
+                            "name": "nvram"
+                        },
+                        {
+                            "file_system": "flash0:/",
+                            "id": "269",
+                            "permissions": "-rw-",
+                            "size": "325",
+                            "total_size": "2142715904",
+                            "total_free": "2029989888",
+                            "date_time": "Apr 5 2021 18:41:50 +00:00",
+                            "name": "e1000_bia.txt"
+                        }
+                    ],
+                    "show_access-list": [
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "10",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "source": "any",
+                            "port": "",
+                            "range": "",
+                            "destination": "any",
+                            "modifier": "eq domain"
+                        },
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "20",
+                            "action": "permit",
+                            "protocol": "tcp",
+                            "source": "any",
+                            "port": "",
+                            "range": "",
+                            "destination": "any",
+                            "modifier": "eq domain"
+                        },
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "30",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "source": "any",
+                            "port": "eq",
+                            "range": "bootps",
+                            "destination": "any",
+                            "modifier": ""
+                        },
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "40",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "source": "any",
+                            "port": "",
+                            "range": "",
+                            "destination": "any",
+                            "modifier": "eq bootpc"
+                        },
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "50",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "source": "any",
+                            "port": "eq",
+                            "range": "bootpc",
+                            "destination": "any",
+                            "modifier": ""
+                        },
+                        {
+                            "name": "preauth_ipv4_acl",
+                            "sn": "60",
+                            "action": "deny",
+                            "protocol": "ip",
+                            "source": "any",
+                            "port": "",
+                            "range": "",
+                            "destination": "any",
+                            "modifier": ""
+                        }
+                    ],
+                    "show_adjacency": [
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.80.128",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.1",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.2",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.80",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.133",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.247",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.250",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.251",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.253",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "endpoint": "192.168.89.254",
+                            "rewrite_headers": [],
+                            "recursive_interface": "",
+                            "recursive_nexthop": ""
+                        }
+                    ],
+                    "show_aliases": [
+                        {
+                            "mode": "Exec mode",
+                            "alias": "h",
+                            "command": "help"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "lo",
+                            "command": "logout"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "p",
+                            "command": "ping"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "r",
+                            "command": "resume"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "s",
+                            "command": "show"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "u",
+                            "command": "undebug"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "un",
+                            "command": "undebug"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "w",
+                            "command": "where"
+                        },
+                        {
+                            "mode": "Exec mode",
+                            "alias": "",
+                            "command": ""
+                        }
+                    ],
+                    "show_archive": [
+                        {
+                            "state": "not enabled"
+                        }
+                    ],
+                    "show_authentication_sessions": "\nNo sessions currently exist",
+                    "show_capability_feature_routing": [
+                        {
+                            "feature": "L3VPN Inter-AS Hybrid",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "L3VPN PE-CE Link Protection",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPF nssa-only",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPF Connected prefix suppression",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPF support of RFC3101",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 IPsec auth/encr",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 BFD",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Graceful Restart",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Address Families",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 PE-CE",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 external path preference",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Stub Router Advertisement",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 support of RFC3101",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Retransmission Limit",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPF Multi-area Adjacency",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Multi-area Adjacency",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv3 Authentication Trailer",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "OSPFv2 HMAC cryptographic authentication",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Remove Private AS all",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Route Target Constraint",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Dynamic Neighbors",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "Inter-VRF Route Replication and Redistribution",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "Routing Context",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Slow peer",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Selective Address Tracking (bgp nexthop route-map)",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "IPv4 static BFD",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "ISIS IPV6 admin tag and advertise passive-only",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGPv6 BFD",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP MIB Version 2 Support",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Enhanced Refresh",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Error Handling",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP BFD CBIT",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP GSHUT",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "Route Tag in Dotted Decimal Notation",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP Additional Paths",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP VRF to global import",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "ISIS BFD IPV6 Support",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "ISIS BFD CBIT",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "CA Application route",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP  Local-as iBGP",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP IBGP PECE",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP MAX-PATH EIBGP",
+                            "state": "Enabled"
+                        },
+                        {
+                            "feature": "BGP TRANSLATE-UPDATE MCAST",
+                            "state": "Enabled"
+                        }
+                    ],
+                    "show_cdp_neighbors": [
+                        {
+                            "neighbor": "NXOS7(TB90BDF200B)",
+                            "local_interface": "Gig 0/0",
+                            "capability": "R S C",
+                            "platform": "N7K-C7018",
+                            "neighbor_interface": "mgmt0"
+                        },
+                        {
+                            "neighbor": "NXOS7(TB90BDF200B)",
+                            "local_interface": "Gig 0/0",
+                            "capability": "R S I C",
+                            "platform": "N7K-C7018",
+                            "neighbor_interface": "Eth 2/1"
+                        },
+                        {
+                            "neighbor": "vIOS.test.local",
+                            "local_interface": "Gig 0/0",
+                            "capability": "R B",
+                            "platform": "Gig",
+                            "neighbor_interface": "0/0"
+                        }
+                    ],
+                    "show_cdp_neighbors_detail": [
+                        {
+                            "destination_host": "NXOS7(TB90BDF200B)",
+                            "management_ip": "192.168.89.251",
+                            "platform": "N7K-C7018",
+                            "remote_port": "mgmt0",
+                            "local_port": "GigabitEthernet0/0",
+                            "software_version": "Cisco Nexus Operating System (NX-OS) Software, Version 7.3(0)D1(1)",
+                            "capabilities": "Router Switch CVTA phone port"
+                        },
+                        {
+                            "destination_host": "NXOS7(TB90BDF200B)",
+                            "management_ip": "192.168.89.250",
+                            "platform": "N7K-C7018",
+                            "remote_port": "Ethernet2/1",
+                            "local_port": "GigabitEthernet0/0",
+                            "software_version": "Cisco Nexus Operating System (NX-OS) Software, Version 7.3(0)D1(1)",
+                            "capabilities": "Router Switch IGMP CVTA phone port"
+                        },
+                        {
+                            "destination_host": "vIOS.test.local",
+                            "management_ip": "192.168.89.253",
+                            "platform": "Cisco ",
+                            "remote_port": "GigabitEthernet0/0",
+                            "local_port": "GigabitEthernet0/0",
+                            "software_version": "Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.6(1)T, RELEASE SOFTWARE (fc1)",
+                            "capabilities": "Router Source-Route-Bridge"
+                        }
+                    ],
+                    "show_clock": [
+                        {
+                            "time": "14:52:18.269",
+                            "timezone": "UTC",
+                            "dayweek": "Tue",
+                            "month": "Apr",
+                            "day": "20",
+                            "year": "2021"
+                        }
+                    ],
+                    "show_etherchannel_summary": "Flags:  D - down        P - bundled in port-channel\n        I - stand-alone s - suspended\n        H - Hot-standby (LACP only)\n        R - Layer3      S - Layer2\n        U - in use      N - not in use, no aggregation\n        f - failed to allocate aggregator\n\n        M - not in use, minimum links not met\n        m - not in use, port not aggregated due to minimum links not met\n        u - unsuitable for bundling\n        w - waiting to be aggregated\n        d - default port\n\n        A - formed by Auto LAG\n\n\nNumber of channel-groups in use: 0\nNumber of aggregators:           0\n\nGroup  Port-channel  Protocol    Ports\n------+-------------+-----------+-----------------------------------------------\n",
+                    "show_interfaces": [
+                        {
+                            "interface": "GigabitEthernet0/0",
+                            "link_status": "up",
+                            "protocol_status": "up (connected)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3100",
+                            "bia": "0c1a.90c3.3100",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "00:00:00",
+                            "last_output": "00:00:00",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "6000",
+                            "output_rate": "9000",
+                            "input_packets": "847391",
+                            "output_packets": "94492",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet0/1",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3101",
+                            "bia": "0c1a.90c3.3101",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet0/2",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3102",
+                            "bia": "0c1a.90c3.3102",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet0/3",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3103",
+                            "bia": "0c1a.90c3.3103",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet1/0",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3104",
+                            "bia": "0c1a.90c3.3104",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet1/1",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3105",
+                            "bia": "0c1a.90c3.3105",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet1/2",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3106",
+                            "bia": "0c1a.90c3.3106",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet1/3",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3107",
+                            "bia": "0c1a.90c3.3107",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet2/0",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3108",
+                            "bia": "0c1a.90c3.3108",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet2/1",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.3109",
+                            "bia": "0c1a.90c3.3109",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet2/2",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310a",
+                            "bia": "0c1a.90c3.310a",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet2/3",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310b",
+                            "bia": "0c1a.90c3.310b",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet3/0",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310c",
+                            "bia": "0c1a.90c3.310c",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet3/1",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310d",
+                            "bia": "0c1a.90c3.310d",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet3/2",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310e",
+                            "bia": "0c1a.90c3.310e",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "GigabitEthernet3/3",
+                            "link_status": "down",
+                            "protocol_status": "down (notconnect)",
+                            "hardware_type": "iGbE",
+                            "address": "0c1a.90c3.310f",
+                            "bia": "0c1a.90c3.310f",
+                            "description": "",
+                            "ip_address": "",
+                            "mtu": "1500",
+                            "duplex": "Full-duplex",
+                            "speed": "Auto-speed",
+                            "media_type": "RJ45",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "never",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "0",
+                            "output_rate": "0",
+                            "input_packets": "0",
+                            "output_packets": "0",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": "0"
+                        },
+                        {
+                            "interface": "Vlan69",
+                            "link_status": "up",
+                            "protocol_status": "up",
+                            "hardware_type": "Ethernet SVI",
+                            "address": "0c1a.90c3.8045",
+                            "bia": "0c1a.90c3.8045",
+                            "description": "",
+                            "ip_address": "192.168.89.252/24",
+                            "mtu": "1500",
+                            "duplex": "",
+                            "speed": "",
+                            "media_type": "",
+                            "bandwidth": "1000000 Kbit",
+                            "delay": "10 usec",
+                            "encapsulation": "ARPA",
+                            "last_input": "00:00:00",
+                            "last_output": "never",
+                            "last_output_hang": "never",
+                            "queue_strategy": "fifo",
+                            "input_rate": "6000",
+                            "output_rate": "9000",
+                            "input_packets": "116037",
+                            "output_packets": "70041",
+                            "input_errors": "0",
+                            "crc": "0",
+                            "abort": "",
+                            "output_errors": ""
+                        }
+                    ],
+                    "show_interfaces_description": [
+                        {
+                            "port": "Gi0/0",
+                            "status": "up",
+                            "protocol": "up",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi0/1",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi0/2",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi0/3",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi1/0",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi1/1",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi1/2",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi1/3",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi2/0",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi2/1",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi2/2",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi2/3",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi3/0",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi3/1",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi3/2",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Gi3/3",
+                            "status": "down",
+                            "protocol": "down",
+                            "descrip": ""
+                        },
+                        {
+                            "port": "Vl69",
+                            "status": "up",
+                            "protocol": "up",
+                            "descrip": ""
+                        }
+                    ],
+                    "show_interfaces_status": [
+                        {
+                            "port": "Gi0/0",
+                            "name": "",
+                            "status": "connected",
+                            "vlan": "69",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi0/1",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi0/2",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi0/3",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi1/0",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi1/1",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi1/2",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi1/3",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi2/0",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi2/1",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi2/2",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi2/3",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi3/0",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi3/1",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi3/2",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        },
+                        {
+                            "port": "Gi3/3",
+                            "name": "",
+                            "status": "notconnect",
+                            "vlan": "169",
+                            "duplex": "a-full",
+                            "speed": "auto",
+                            "type": "RJ45"
+                        }
+                    ],
+                    "show_interfaces_switchport": [
+                        {
+                            "interface": "Gi0/0",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "static access",
+                            "admin_mode": "static access",
+                            "access_vlan": "69",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi0/1",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi0/2",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi0/3",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi1/0",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi1/1",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi1/2",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi1/3",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi2/0",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi2/1",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi2/2",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi2/3",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi3/0",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi3/1",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi3/2",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        },
+                        {
+                            "interface": "Gi3/3",
+                            "switchport": "Enabled",
+                            "switchport_monitor": "",
+                            "switchport_negotiation": "Off",
+                            "mode": "down",
+                            "admin_mode": "static access",
+                            "access_vlan": "169",
+                            "native_vlan": "1",
+                            "voice_vlan": "none",
+                            "trunking_vlans": [
+                                "ALL"
+                            ]
+                        }
+                    ],
+                    "show_inventory": "",
+                    "show_ipv6_interface_brief": [
+                        {
+                            "intf": "GigabitEthernet0/0",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "up",
+                            "protocol": "up"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/1",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/2",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/3",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/0",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/1",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/2",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/3",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/0",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/1",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/2",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/3",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/0",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/1",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/2",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/3",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "down",
+                            "protocol": "down"
+                        },
+                        {
+                            "intf": "Vlan69",
+                            "ipaddr": [
+                                "unassigned"
+                            ],
+                            "admin": "up",
+                            "protocol": "up"
+                        }
+                    ],
+                    "show_ipv6_neighbors": "",
+                    "show_ip_access-lists": [
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "",
+                            "action": "",
+                            "protocol": "",
+                            "src_host": "",
+                            "src_any": "",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "",
+                            "src_port": "",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "",
+                            "dst_port": "",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "10",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "",
+                            "src_port": "",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "eq",
+                            "dst_port": "domain",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "20",
+                            "action": "permit",
+                            "protocol": "tcp",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "",
+                            "src_port": "",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "eq",
+                            "dst_port": "domain",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "30",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "eq",
+                            "src_port": "bootps",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "",
+                            "dst_port": "",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "40",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "",
+                            "src_port": "",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "eq",
+                            "dst_port": "bootpc",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "50",
+                            "action": "permit",
+                            "protocol": "udp",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "eq",
+                            "src_port": "bootpc",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "",
+                            "dst_port": "",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        },
+                        {
+                            "acl_type": "Extended",
+                            "acl_name": "preauth_ipv4_acl",
+                            "line_num": "60",
+                            "action": "deny",
+                            "protocol": "ip",
+                            "src_host": "",
+                            "src_any": "any",
+                            "src_network": "",
+                            "src_wildcard": "",
+                            "src_port_match": "",
+                            "src_port": "",
+                            "src_port_range_start": "",
+                            "src_port_range_end": "",
+                            "dst_host": "",
+                            "dst_any": "any",
+                            "dst_network": "",
+                            "dst_wildcard": "",
+                            "dst_port_match": "",
+                            "dst_port": "",
+                            "dst_port_range_start": "",
+                            "dst_port_range_end": "",
+                            "flags_match": "",
+                            "tcp_flag": "",
+                            "log": "",
+                            "time": "",
+                            "state": "",
+                            "matches": ""
+                        }
+                    ],
+                    "show_ip_arp": [
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.80.128",
+                            "age": "30",
+                            "mac": "000c.29d0.900b",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.1",
+                            "age": "0",
+                            "mac": "0050.56c0.0008",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.2",
+                            "age": "3",
+                            "mac": "0050.56e2.487a",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.80",
+                            "age": "25",
+                            "mac": "000c.292a.e6c9",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.133",
+                            "age": "1",
+                            "mac": "000c.29d0.900b",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.247",
+                            "age": "47",
+                            "mac": "0c1a.9082.b800",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.250",
+                            "age": "13",
+                            "mac": "0c1a.90bd.f22f",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.251",
+                            "age": "13",
+                            "mac": "0c1a.90bd.f200",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.252",
+                            "age": "-",
+                            "mac": "0c1a.90c3.8045",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.253",
+                            "age": "131",
+                            "mac": "0c1a.90b6.2a00",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        },
+                        {
+                            "protocol": "Internet",
+                            "address": "192.168.89.254",
+                            "age": "168",
+                            "mac": "0c1a.905f.cd00",
+                            "type": "ARPA",
+                            "interface": "Vlan69"
+                        }
+                    ],
+                    "show_ip_bgp": "\n% BGP not active\n",
+                    "show_ip_bgp_neighbors": "% BGP not active\n",
+                    "show_ip_bgp_summary": "\n% BGP not active\n",
+                    "show_ip_cef": [
+                        {
+                            "prefix": "0.0.0.0/0",
+                            "nexthop": [
+                                "192.168.89.2"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "0.0.0.0/8",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "0.0.0.0/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "127.0.0.0/8",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "192.168.89.0/24",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.0/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.1/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.2/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.80/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.133/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.247/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.250/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.251/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.252/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.253/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.254/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.255/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "224.0.0.0/4",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "224.0.0.0/24",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "240.0.0.0/4",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "255.255.255.255/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        }
+                    ],
+                    "show_ip_cef_detail": [
+                        {
+                            "prefix": "0.0.0.0/0",
+                            "nexthop": [
+                                "192.168.89.2"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "0.0.0.0/8",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "0.0.0.0/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "127.0.0.0/8",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "192.168.89.0/24",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.0/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.1/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.2/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.80/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.133/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.247/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.250/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.251/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.252/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.253/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.254/32",
+                            "nexthop": [
+                                "attached"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "192.168.89.255/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": [
+                                "Vlan69"
+                            ]
+                        },
+                        {
+                            "prefix": "224.0.0.0/4",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "224.0.0.0/24",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "240.0.0.0/4",
+                            "nexthop": [
+                                "drop"
+                            ],
+                            "interface": []
+                        },
+                        {
+                            "prefix": "255.255.255.255/32",
+                            "nexthop": [
+                                "receive"
+                            ],
+                            "interface": []
+                        }
+                    ],
+                    "show_ip_device_tracking_all": "\nGlobal IP Device Tracking for clients = Disabled\n-----------------------------------------------------------------------------------------------\n  IP Address    MAC Address   Vlan  Interface           Probe-Timeout      State    Source\n-----------------------------------------------------------------------------------------------\n",
+                    "show_ip_eigrp_neighbors": "",
+                    "show_ip_eigrp_topology": "",
+                    "show_ip_interface": [
+                        {
+                            "intf": "GigabitEthernet0/0",
+                            "link_status": "up",
+                            "protocol_status": "up",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet0/1",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet0/2",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet0/3",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet1/0",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet1/1",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet1/2",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet1/3",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet2/0",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet2/1",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet2/2",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet2/3",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet3/0",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet3/1",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet3/2",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "GigabitEthernet3/3",
+                            "link_status": "down",
+                            "protocol_status": "down",
+                            "ipaddr": [],
+                            "mask": [],
+                            "vrf": "",
+                            "mtu": "",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        },
+                        {
+                            "intf": "Vlan69",
+                            "link_status": "up",
+                            "protocol_status": "up",
+                            "ipaddr": [
+                                "192.168.89.252"
+                            ],
+                            "mask": [
+                                "24"
+                            ],
+                            "vrf": "",
+                            "mtu": "1500",
+                            "ip_helper": [],
+                            "outgoing_acl": "",
+                            "inbound_acl": ""
+                        }
+                    ],
+                    "show_ip_interface_brief": [
+                        {
+                            "intf": "GigabitEthernet0/0",
+                            "ipaddr": "unassigned",
+                            "status": "up",
+                            "proto": "up"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/1",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/2",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet0/3",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/0",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/1",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/2",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet1/3",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/0",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/1",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/2",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet2/3",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/0",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/1",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/2",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "GigabitEthernet3/3",
+                            "ipaddr": "unassigned",
+                            "status": "down",
+                            "proto": "down"
+                        },
+                        {
+                            "intf": "Vlan69",
+                            "ipaddr": "192.168.89.252",
+                            "status": "up",
+                            "proto": "up"
+                        }
+                    ],
+                    "show_ip_mroute": "IP Multicast Forwarding is not enabled.\nIP Multicast Routing Table\nFlags: D - Dense, S - Sparse, B - Bidir Group, s - SSM Group, C - Connected,\n       L - Local, P - Pruned, R - RP-bit set, F - Register flag,\n       T - SPT-bit set, J - Join SPT, M - MSDP created entry, E - Extranet,\n       X - Proxy Join Timer Running, A - Candidate for MSDP Advertisement,\n       U - URD, I - Received Source Specific Host Report, \n       Z - Multicast Tunnel, z - MDT-data group sender, \n       Y - Joined MDT-data group, y - Sending to MDT-data group, \n       G - Received BGP C-Mroute, g - Sent BGP C-Mroute, \n       N - Received BGP Shared-Tree Prune, n - BGP C-Mroute suppressed, \n       Q - Received BGP S-A Route, q - Sent BGP S-A Route, \n       V - RD & Vector, v - Vector, p - PIM Joins on route, \n       x - VxLAN group\nOutgoing interface flags: H - Hardware switched, A - Assert winner, p - PIM Join\n Timers: Uptime/Expires\n Interface state: Interface, Next-Hop or VCD, State/Mode\n",
+                    "show_ip_ospf_database": "",
+                    "show_ip_ospf_database_network": "",
+                    "show_ip_ospf_database_router": "",
+                    "show_ip_ospf_interface_brief": "",
+                    "show_ip_ospf_neighbor": "",
+                    "show_ip_prefix-list": "",
+                    "show_ip_route": [
+                        {
+                            "protocol": "S",
+                            "type": "",
+                            "network": "0.0.0.0",
+                            "mask": "0",
+                            "distance": "1",
+                            "metric": "0",
+                            "nexthop_ip": "192.168.89.2",
+                            "nexthop_if": "",
+                            "uptime": ""
+                        },
+                        {
+                            "protocol": "C",
+                            "type": "",
+                            "network": "192.168.89.0",
+                            "mask": "24",
+                            "distance": "",
+                            "metric": "",
+                            "nexthop_ip": "",
+                            "nexthop_if": "Vlan69",
+                            "uptime": ""
+                        },
+                        {
+                            "protocol": "L",
+                            "type": "",
+                            "network": "192.168.89.252",
+                            "mask": "32",
+                            "distance": "",
+                            "metric": "",
+                            "nexthop_ip": "",
+                            "nexthop_if": "Vlan69",
+                            "uptime": ""
+                        }
+                    ],
+                    "show_ip_route_summary": [
+                        {
+                            "route_source": "connected",
+                            "name": "default (0x0)",
+                            "networks": "0",
+                            "subnets": "2",
+                            "replicates": "0",
+                            "overhead": "136",
+                            "memory": "360"
+                        },
+                        {
+                            "route_source": "static",
+                            "name": "default (0x0)",
+                            "networks": "1",
+                            "subnets": "0",
+                            "replicates": "0",
+                            "overhead": "68",
+                            "memory": "180"
+                        },
+                        {
+                            "route_source": "application",
+                            "name": "default (0x0)",
+                            "networks": "0",
+                            "subnets": "0",
+                            "replicates": "0",
+                            "overhead": "0",
+                            "memory": "0"
+                        },
+                        {
+                            "route_source": "internal",
+                            "name": "default (0x0)",
+                            "networks": "1",
+                            "subnets": "",
+                            "replicates": "",
+                            "overhead": "",
+                            "memory": "440"
+                        },
+                        {
+                            "route_source": "Total",
+                            "name": "default (0x0)",
+                            "networks": "2",
+                            "subnets": "2",
+                            "replicates": "0",
+                            "overhead": "204",
+                            "memory": "980"
+                        }
+                    ],
+                    "show_ip_source_binding": "MacAddress          IpAddress        Lease(sec)  Type           VLAN  Interface\n------------------  ---------------  ----------  -------------  ----  --------------------\nTotal number of bindings: 0\n",
+                    "show_ip_vrf_interfaces": "Interface              IP-Address      VRF                              Protocol",
+                    "show_isis_neighbors": "",
+                    "show_lldp_neighbors": "% LLDP is not enabled",
+                    "show_lldp_neighbors_detail": "% LLDP is not enabled",
+                    "show_logging": [
+                        {
+                            "number": "",
+                            "month": "*Apr",
+                            "day": "5",
+                            "time": "18:43:55.376",
+                            "timezone": "",
+                            "facility": "GRUB",
+                            "severity": "5",
+                            "mnemonic": "CONFIG_WRITTEN",
+                            "message": [
+                                "Interface GigabitEthernet2/0, changed state to reset",
+                                "Interface GigabitEthernet2/1, changed state to reset",
+                                "Interface GigabitEthernet2/2, changed state to reset",
+                                "Interface GigabitEthernet2/3, changed state to reset",
+                                "Interface GigabitEthernet3/0, changed state to reset",
+                                "Interface GigabitEthernet3/1, changed state to reset",
+                                "Interface GigabitEthernet3/2, changed state to reset",
+                                "Interface GigabitEthernet3/3, changed state to reset",
+                                "Unexpected end of configuration file.",
+                                "Configured from memory by console",
+                                "Line protocol on Interface GigabitEthernet0/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet0/1, changed state to up",
+                                "Line protocol on Interface GigabitEthernet0/2, changed state to up",
+                                "Line protocol on Interface GigabitEthernet0/3, changed state to up",
+                                "Line protocol on Interface GigabitEthernet1/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet1/1, changed state to up",
+                                "Line protocol on Interface GigabitEthernet1/2, changed state to up",
+                                "Line protocol on Interface GigabitEthernet1/3, changed state to up",
+                                "Line protocol on Interface GigabitEthernet2/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet2/1, changed state to up",
+                                "Line protocol on Interface GigabitEthernet2/2, changed state to up",
+                                "Line protocol on Interface GigabitEthernet2/3, changed state to up",
+                                "Line protocol on Interface GigabitEthernet3/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet3/1, changed state to up",
+                                "Line protocol on Interface GigabitEthernet3/2, changed state to up",
+                                "Line protocol on Interface GigabitEthernet3/3, changed state to up",
+                                "Line protocol on Interface Vlan69, changed state to down",
+                                "Interface GigabitEthernet3/3, changed state to down",
+                                "Interface GigabitEthernet3/2, changed state to down",
+                                "Interface GigabitEthernet3/1, changed state to down",
+                                "Interface GigabitEthernet3/0, changed state to down",
+                                "Interface GigabitEthernet2/3, changed state to down",
+                                "Interface GigabitEthernet2/2, changed state to down",
+                                "Interface GigabitEthernet2/1, changed state to down",
+                                "Interface GigabitEthernet2/0, changed state to down",
+                                "Interface GigabitEthernet1/3, changed state to down",
+                                "Interface GigabitEthernet1/2, changed state to down",
+                                "Interface GigabitEthernet1/1, changed state to down",
+                                "Interface GigabitEthernet1/0, changed state to down",
+                                "Interface GigabitEthernet0/3, changed state to down",
+                                "Interface GigabitEthernet0/2, changed state to down",
+                                "Interface GigabitEthernet0/1, changed state to down",
+                                "Interface GigabitEthernet0/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet3/3, changed state to down",
+                                "Line protocol on Interface GigabitEthernet3/2, changed state to down",
+                                "Line protocol on Interface GigabitEthernet3/1, changed state to down",
+                                "Line protocol on Interface GigabitEthernet3/0, changed state to down",
+                                "Line protocol on Interface GigabitEthernet2/3, changed state to down",
+                                "Line protocol on Interface GigabitEthernet2/2, changed state to down",
+                                "Line protocol on Interface GigabitEthernet2/1, changed state to down",
+                                "Line protocol on Interface GigabitEthernet2/0, changed state to down",
+                                "Line protocol on Interface GigabitEthernet1/3, changed state to down",
+                                "Line protocol on Interface GigabitEthernet1/2, changed state to down",
+                                "Line protocol on Interface GigabitEthernet1/1, changed state to down",
+                                "Line protocol on Interface GigabitEthernet1/0, changed state to down",
+                                "Line protocol on Interface GigabitEthernet0/3, changed state to down",
+                                "Line protocol on Interface GigabitEthernet0/2, changed state to down",
+                                "Line protocol on Interface GigabitEthernet0/1, changed state to down",
+                                "System restarted --",
+                                "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20170321:233949) [mmen 101]",
+                                "Copyright (c) 1986-2017 by Cisco Systems, Inc.",
+                                "Compiled Wed 22-Mar-17 08:38 by mmen",
+                                "Interface Vlan69, changed state to up",
+                                "Line protocol on Interface Vlan69, changed state to up",
+                                "Image 'flash0:/vios_l2-adventerprisek9-m' passed code signing verification",
+                                "Interface Vlan69, changed state to administratively down",
+                                "Line protocol on Interface Vlan69, changed state to down",
+                                "Interface GigabitEthernet0/0, changed state to administratively down",
+                                "Line protocol on Interface GigabitEthernet0/0, changed state to down",
+                                "Interface GigabitEthernet0/0, changed state to up",
+                                "Line protocol on Interface GigabitEthernet0/0, changed state to up",
+                                "Configured from console by console",
+                                "GRUB configuration is being updated on disk. Please wait...",
+                                "GRUB configuration was written to disk successfully.",
+                                "Configured from console by console",
+                                "Interface Vlan69, changed state to up",
+                                "Line protocol on Interface Vlan69, changed state to up",
+                                "GRUB configuration is being updated on disk. Please wait...",
+                                "GRUB configuration was written to disk successfully.",
+                                "SSH 2.0 has been enabled",
+                                "Configured from console by console",
+                                "GRUB configuration is being updated on disk. Please wait...",
+                                "GRUB configuration was written to disk successfully."
+                            ]
+                        }
+                    ],
+                    "show_object-group": "",
+                    "show_processes_cpu": [
+                        {
+                            "cpu_5_sec": "59",
+                            "cpu_1_min": "39",
+                            "cpu_5_min": "21",
+                            "interrupts": "0"
+                        }
+                    ],
+                    "show_route-map": "",
+                    "show_running-config_partition_access-list": "Building configuration...\n\nCurrent configuration : 61 bytes\n!\nConfiguration of Partition - access-list \n!\n!\n!\n!\n!\n!\nend\n",
+                    "show_running-config_partition_route-map": "Building configuration...\n\nCurrent configuration : 55 bytes\n!\nConfiguration of Partition - route-map \n!\n!\n!\n!\nend\n",
+                    "show_snmp_community": "\n%SNMP agent not enabled",
+                    "show_spanning-tree": [
+                        {
+                            "vlan_id": "69",
+                            "interface": "Gi0/0",
+                            "role": "Root",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "1",
+                            "type": "P2p "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi0/1",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "2",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi0/2",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "3",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi0/3",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "4",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi1/0",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "5",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi1/1",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "6",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi1/2",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "7",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi1/3",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "8",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi2/0",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "9",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi2/1",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "10",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi2/2",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "11",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi2/3",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "12",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi3/0",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "13",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi3/1",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "14",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi3/2",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "15",
+                            "type": "P2p Edge "
+                        },
+                        {
+                            "vlan_id": "169",
+                            "interface": "Gi3/3",
+                            "role": "Desg",
+                            "status": "FWD",
+                            "cost": "4",
+                            "port_priority": "128",
+                            "port_id": "16",
+                            "type": "P2p Edge "
+                        }
+                    ],
+                    "show_standby": "",
+                    "show_standby_brief": "",
+                    "show_tacacs": "",
+                    "show_version": [
+                        {
+                            "version": "",
+                            "rommon": "Bootstrap",
+                            "hostname": "L2Switch",
+                            "uptime": "2 weeks, 1 day, 5 hours, 19 minutes",
+                            "reload_reason": "Unknown reason",
+                            "running_image": "/vios_l2-adventerprisek9-m",
+                            "hardware": [
+                                "IOSv"
+                            ],
+                            "serial": [
+                                "9GBM71WM1VE"
+                            ],
+                            "config_register": "0x101",
+                            "mac": []
+                        }
+                    ],
+                    "show_vlan": [
+                        {
+                            "vlan_id": "1",
+                            "name": "default",
+                            "status": "active",
+                            "interfaces": []
+                        },
+                        {
+                            "vlan_id": "69",
+                            "name": "MGMT",
+                            "status": "active",
+                            "interfaces": [
+                                "Gi0/0"
+                            ]
+                        },
+                        {
+                            "vlan_id": "169",
+                            "name": "Other",
+                            "status": "active",
+                            "interfaces": [
+                                "Gi0/1",
+                                "Gi0/2",
+                                "Gi0/3",
+                                "Gi1/0",
+                                "Gi1/1",
+                                "Gi1/2",
+                                "Gi1/3",
+                                "Gi2/0",
+                                "Gi2/1",
+                                "Gi2/2",
+                                "Gi2/3",
+                                "Gi3/0",
+                                "Gi3/1",
+                                "Gi3/2",
+                                "Gi3/3"
+                            ]
+                        },
+                        {
+                            "vlan_id": "1002",
+                            "name": "fddi-default",
+                            "status": "act/unsup",
+                            "interfaces": []
+                        },
+                        {
+                            "vlan_id": "1003",
+                            "name": "token-ring-default",
+                            "status": "act/unsup",
+                            "interfaces": []
+                        },
+                        {
+                            "vlan_id": "1004",
+                            "name": "fddinet-default",
+                            "status": "act/unsup",
+                            "interfaces": []
+                        },
+                        {
+                            "vlan_id": "1005",
+                            "name": "trnet-default",
+                            "status": "act/unsup",
+                            "interfaces": []
+                        }
+                    ],
+                    "show_vrf": "",
+                    "show_vrrp_all": "",
+                    "show_vrrp_brief": "Interface          Grp Pri Time  Own Pre State   Master addr     Group addr",
+                    "show_vtp_status": [
+                        {
+                            "version": "1",
+                            "domain": "",
+                            "pruning": "Disabled",
+                            "traps": "Disabled",
+                            "device_id": "0c1a.90c3.8000",
+                            "last_modified_server": "192.168.89.252",
+                            "last_modified_date": "3-16-21 08:41:20",
+                            "local_updater_addr": "192.168.89.252",
+                            "local_updater_iface": "Vl69",
+                            "mode": "Server",
+                            "max_vlans": "1005",
+                            "existing_vlan_count": "7",
+                            "revision_number": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,234 @@
+{
+    "192.168.0.254": {
+        "ping_response_times": [
+            9.38,
+            10.17,
+            11.61
+        ],
+        "username": "jmctsm",
+        "password": "Password for device has been given",
+        "enable_password": "Not using Enable password for this device",
+        "domain_name": "test.local",
+        "Open_TCP_Ports_List": {
+            "80": {
+                "Connection": "close",
+                "Pragma": "no-cache",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Expires": "0",
+                "Content-Type": "text/html",
+                "X-Frame-Options": "deny",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Set-Cookie": "SessionID=3f53ae4f729b3eeb20e2d16900e62834; Version=1; Discard; HttpOnly; Path=/"
+            },
+            "443": {
+                "Connection": "close",
+                "Pragma": "no-cache",
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Expires": "0",
+                "Content-Type": "text/html",
+                "X-Frame-Options": "deny",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "1; mode=block",
+                "Set-Cookie": "SessionID=639a709c6b304872583130b666011d1a; Version=1; Discard; HttpOnly; Path=/"
+            }
+        },
+        "Open_UDP_Ports_List": {
+            "53": {
+                "Name": "test.local.",
+                "Record Type": "SOA",
+                "Record Class": "IN",
+                "nameserver": "192.168.0.254",
+                "port": "53",
+                "Answer": "test.local. 900 IN SOA ns1-etm.att.net. nomail.etm.att.net. 1 604800 3600 2419200 900",
+                "Canonical Name": "test.local.",
+                "Minimum TTL": "900",
+                "CNAMES": [],
+                "DNS Record Set": "test.local. 900 IN SOA ns1-etm.att.net. nomail.etm.att.net. 1 604800 3600 2419200 900",
+                "expiration": "1618952715.6518812"
+            }
+        },
+        "Closed_TCP_Ports_List": {
+            "20": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "21": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "22": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "23": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "25": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "37": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "43": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "53": {
+                "ERROR": "DNSTransferError -- Zone Transfer Error for test.local on server 192.168.0.254"
+            },
+            "79": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "88": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "109": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "110": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "115": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "118": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "143": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "162": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "179": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "194": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "389": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "464": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "465": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "515": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "530": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "543": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "544": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "547": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "993": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "995": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "1080": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3128": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3306": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "3389": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5432": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5900": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "5938": {
+                "ERROR": "ConnectionRefusedError -- No connection could be made because the target machine actively refused it"
+            },
+            "8080": {
+                "ERROR": "ConnectionError -- HTTPConnectionPool(host='192.168.0.254', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x04C6BDD8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            },
+            "8443": {
+                "ERROR": "ConnectionError -- HTTPSConnectionPool(host='192.168.0.254', port=8443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x05259D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            }
+        },
+        "Closed_UDP_Ports_List": {
+            "43": {
+                "ERROR": "Socket Timed Out"
+            },
+            "67": {
+                "ERROR": "Socket Timed Out"
+            },
+            "69": {
+                "ERROR": "Socket Timed Out"
+            },
+            "88": {
+                "ERROR": "Socket Timed Out"
+            },
+            "118": {
+                "ERROR": "Socket Timed Out"
+            },
+            "123": {
+                "ERROR": "Socket Timed Out"
+            },
+            "161": {
+                "ERROR": "Socket Timed Out"
+            },
+            "162": {
+                "ERROR": "Socket Timed Out"
+            },
+            "194": {
+                "ERROR": "Socket Timed Out"
+            },
+            "464": {
+                "ERROR": "Socket Timed Out"
+            },
+            "514": {
+                "ERROR": "Socket Timed Out"
+            },
+            "530": {
+                "ERROR": "Socket Timed Out"
+            },
+            "547": {
+                "ERROR": "Socket Timed Out"
+            },
+            "995": {
+                "ERROR": "Socket Timed Out"
+            },
+            "1080": {
+                "ERROR": "Socket Timed Out"
+            },
+            "3389": {
+                "ERROR": "Socket Timed Out"
+            },
+            "5938": {
+                "ERROR": "Socket Timed Out"
+            },
+            "8080": {
+                "ERROR": "Socket Timed Out"
+            },
+            "8443": {
+                "ERROR": "Socket Timed Out"
+            }
+        },
+        "Device_Info": {
+            "Version_Info": [
+                "No Version information was available"
+            ],
+            "CONFIG": {
+                "Open_Close": false,
+                "Open_Close_Msg": "SSH is not open on the device for ports scanned",
+                "Device_Information": {}
+            }
+        }
+    }
+}

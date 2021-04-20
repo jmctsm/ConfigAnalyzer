@@ -1,0 +1,83 @@
+{
+    "192.168.0.254": {
+        "ping_response_times": [
+            9.38,
+            10.17,
+            11.61
+        ],
+        "username": "jmctsm",
+        "password": "Password for device has been given",
+        "enable_password": "Not using Enable password for this device",
+        "domain_name": "test.local",
+        "Open_TCP_Ports_List": [
+            "80",
+            "443"
+        ],
+        "Open_UDP_Ports_List": [
+            "53"
+        ],
+        "Closed_TCP_Ports_List": [
+            "20",
+            "21",
+            "22",
+            "23",
+            "25",
+            "37",
+            "43",
+            "53",
+            "79",
+            "88",
+            "109",
+            "110",
+            "115",
+            "118",
+            "143",
+            "162",
+            "179",
+            "194",
+            "389",
+            "464",
+            "465",
+            "515",
+            "530",
+            "543",
+            "544",
+            "547",
+            "993",
+            "995",
+            "1080",
+            "3128",
+            "3306",
+            "3389",
+            "5432",
+            "5900",
+            "5938",
+            "8080",
+            "8443"
+        ],
+        "Closed_UDP_Ports_List": [
+            "43",
+            "67",
+            "69",
+            "88",
+            "118",
+            "123",
+            "161",
+            "162",
+            "194",
+            "464",
+            "514",
+            "530",
+            "547",
+            "995",
+            "1080",
+            "3389",
+            "5938",
+            "8080",
+            "8443"
+        ],
+        "Device_Info": [
+            "No Version information was available"
+        ]
+    }
+}
